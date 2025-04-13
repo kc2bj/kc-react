@@ -1,0 +1,12 @@
+name: 'Kris Claro'
+type: theme
+description: 'Claro subtheme customized for Kris''s headless backend aesthetic.'
+core_version_requirement: ^10 || ^11
+base theme: claro
+package: Custom
+theme-settings:
+  features:
+    - logo
+    - favicon
+libraries:
+  - kris_claro/global-styling

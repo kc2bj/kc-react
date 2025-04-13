@@ -1,0 +1,46 @@
+/* Main content background */
+body {
+    background-color: #fdf8f2; /* Light soft tan */
+    color: #2a2a2a;            /* Dark readable text */
+  }
+  
+  /* Admin toolbar and headers */
+  #toolbar-bar,
+  .toolbar-menu-administration,
+  .claro-toolbar .toolbar-bar,
+  .region-header {
+    background-color: #3a2700 !important; /* Deep brown */
+    color: #f5deb3 !important;
+  }
+  
+  .toolbar .toolbar-menu a,
+  .claro-toolbar .toolbar-menu a {
+    color: #f5deb3 !important;
+  }
+  
+  .toolbar .toolbar-menu a:hover {
+    background-color: #4a3200 !important;
+  }
+  
+  /* Form inputs, buttons */
+  input,
+  select,
+  textarea,
+  button {
+    background-color: #ffffff;
+    border: 1px solid #d2b48c;
+    color: #3a2700;
+  }
+  
+  /* Highlighted buttons and actions */
+  .button,
+  .button--primary {
+    background-color: transparent;
+    border: 1px solid #f5deb3;
+    color: #3a2700;
+  }
+  
+  .button:hover {
+    background-color: #f5deb3;
+    color: #3a2700;
+  }  
