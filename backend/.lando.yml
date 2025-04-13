@@ -1,0 +1,16 @@
+name: kris-portfolio
+recipe: drupal10
+config:
+  webroot: web
+  php: '8.3'
+  composer_version: 2
+  xdebug: true
+
+services:
+  database:
+    type: mariadb:10.6
+    portforward: true
+
+tooling:
+  drush:
+    service: appserver
