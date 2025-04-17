@@ -20,6 +20,7 @@
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
+        "drupal/jsonapi_extras": "3.26",
         "drush/drush": "^13.5"
     },
     "conflict": {

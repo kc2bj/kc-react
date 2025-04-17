@@ -912,3 +912,18 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_5Xani1XkMwDxYcOCjliCNFCN0otUHVWBtzFHAFYlJ4I1s6sf_toUFDoLvQtWdlRns-KT_GGjVA/sync';
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+$settings['cors.config'] = [
+  'enabled' => true,
+  'allowedHeaders' => ['*'],
+  'allowedMethods' => ['*'],
+  'allowedOrigins' => ['http://localhost:5173'],
+  'allowedOriginsPatterns' => [],
+  'exposedHeaders' => ['*'],
+  'maxAge' => 1000,
+  'supportsCredentials' => true,
+];
