@@ -1,18 +1,23 @@
 export default {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}"
-    ],
-    theme: {
-      extend: {
-        fontFamily: {
-            sans: ['"Inter"', 'sans-serif'],
-        },
-        colors: {
-          primary: '#1c1c1e',
-          accent: '#ef4444'
-        }
-      }
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  safelist: ['font-sans'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Satoshi", "sans-serif"],
+      },
     },
-    plugins: []
-  };
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.font-sans': {
+          'font-family': 'Satoshi, sans-serif',
+        },
+      });
+    },
+  ],
+};
