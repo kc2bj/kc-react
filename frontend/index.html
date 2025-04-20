@@ -1,8 +1,32 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              espresso: {
+                bg: '#2B2A27',
+                surface: '#3E3D38',
+                accent: '#D3A87C',
+                text: '#F2E9DC',
+                muted: '#B8B2A6',
+                border: '#44413E',
+              },
+            },
+            fontFamily: {
+              sans: ['Satoshi', 'sans-serif'],
+            },
+          },
+        }
+      }
+    </script>    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/styles/global.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kris Celeste</title>
   </head>

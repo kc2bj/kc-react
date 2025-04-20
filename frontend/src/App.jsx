@@ -1,22 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
-      <div className="font-sans bg-white text-primary min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Work />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="work" element={<Work />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;

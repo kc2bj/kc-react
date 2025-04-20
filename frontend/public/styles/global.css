@@ -1,0 +1,127 @@
+/* Global Styles */
+
+html {
+    font-family: 'Satoshi', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  html.dark body {
+    background-color: #2B2A27; /* espresso-bg */
+    color: #F2E9DC; /* espresso-text */
+  }
+  
+  h1 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  html.dark p {
+    color: #B8B2A6; /* espresso-muted */
+  }
+  
+  a {
+    color: #2563eb; /* Tailwind's blue-600 */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  html.dark a {
+    color: #D3A87C; /* espresso-accent */
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  html.dark hr {
+    border-top-color: #44413E; /* espresso-border */
+  }
+
+  /* global.css */
+
+html {
+    font-family: 'Satoshi', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  html.dark body {
+    background-color: #2B2A27; /* espresso-bg */
+    color: #F2E9DC; /* espresso-text */
+  }
+  
+  h1 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  html.dark p {
+    color: #B8B2A6; /* espresso-muted */
+  }
+  
+  a {
+    color: #2563eb; /* Tailwind's blue-600 */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  html.dark a {
+    color: #D3A87C; /* espresso-accent */
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  html.dark hr {
+    border-top-color: #44413E; /* espresso-border */
+  }
+  
