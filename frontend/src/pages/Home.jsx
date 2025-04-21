@@ -1,10 +1,22 @@
 export default function Home() {
   return (
-    <section className="space-y-4 dark:bg-espresso-surfacedark:border-espresso-border rounded">
-      <h1 className="text-4xl font-bold mb-2">Hi, I'm Kris.</h1>
-      <p className="text-muted dark:text-espresso-muted">
-      I'm a multidisciplinary designer and developer crafting intuitive digital experiences in Charlottesville, Virginia. With expertise spanning UX/UI design and full-stack development, I transform complex challenges into elegant, user-centered solutions.
-      </p>
+    <section className="w-full max-w-4xl mx-auto px-6 py-16">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+        {/* Profile Image */}
+        <img
+          src="/images/Kris_profile_photo_box.png"
+          alt="Kris Celeste"
+          className="w-32 h-32 rounded-full object-cover"
+        />
+
+        {/* Intro Text */}
+        <div>
+          <h1 className="text-4xl font-bold mb-4">Hi, I'm Kris.</h1>
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            I'm a frontend developer and UX/UI designer. I turn ideas into clean, functional, and beautiful digital experiences.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
