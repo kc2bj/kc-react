@@ -80,41 +80,6 @@ export default function Code() {
             <strong>69% Commits, 31% Pull Requests</strong> – feature development & collaboration
           </li>
           <li>
-            Top repositories:
-            <ul className="list-disc ml-6">
-              <li>
-                <a
-                  href="https://github.com/uvarc/rc-website"
-                  className="text-blue-600 dark:text-espresso-accent hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @uvarc/rc-website
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/uva-its-cacsdrupal/uvasf"
-                  className="text-blue-600 dark:text-espresso-accent hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @uva-its-cacsdrupal/uvasf
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/kc2bj/personal-website"
-                  className="text-blue-600 dark:text-espresso-accent hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @kc2bj/personal-website
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
             Tech stack includes <strong>Drupal</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Vite</strong>, <strong>Acquia</strong>, <strong>Netlify</strong>
           </li>
           <li>
