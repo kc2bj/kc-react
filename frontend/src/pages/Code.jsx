@@ -41,28 +41,30 @@ export default function Code() {
         >
           {week.map((day, di) => (
             <motion.div
-              key={`${wi}-${di}`}
-              className="circle"
-              title={
-                day
-                  ? `${new Date(day.date).toLocaleDateString(undefined, {
-                      weekday: "short",
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })} — ${day.count} contribution${day.count !== 1 ? "s" : ""}`
-                  : ""
-              }
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: di * 0.005 }}
-              style={{
-                backgroundColor: day?.color || "#e5e7eb",
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-              }}
-            />
+            key={`${wi}-${di}`}
+            className="circle"
+            title={
+              day
+                ? `${new Date(day.date).toLocaleDateString(undefined, {
+                    weekday: "short",
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })} — ${day.count} contribution${day.count !== 1 ? "s" : ""}`
+                : ""
+            }
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            whileHover={{ scale: 1.4 }}
+            transition={{ delay: di * 0.005, type: "spring", stiffness: 200 }}
+            style={{
+              backgroundColor: day?.color || "#e5e7eb",
+              width: "10px",
+              height: "10px",
+              borderRadius: "50%",
+              cursor: "pointer", // optional for hover affordance
+            }}
+          />          
           ))}
         </motion.div>
       ))}
