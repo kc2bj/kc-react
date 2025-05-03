@@ -3,6 +3,9 @@ import { AnimatePresence } from "framer-motion";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
+import Code from './pages/Code';
+
+<Route path="code" element={<Code />} />
 
 function AnimatedRoutes() {
   const location = useLocation();

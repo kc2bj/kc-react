@@ -99,7 +99,7 @@ html {
   }
   
   html.dark p {
-    color: #B8B2A6; /* espresso-muted */
+    color: #333;
   }
   
   a {
@@ -123,5 +123,10 @@ html {
   
   html.dark hr {
     border-top-color: #44413E; /* espresso-border */
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s;
   }
   
