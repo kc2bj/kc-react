@@ -9,7 +9,7 @@ export default function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-black dark:text-espresso-text">About Me</h2>
+      <h2 className="text-4xl font-bold mb-6">About Me</h2>
 
       <div className="mb-8">
         <h3 className="text-xl font-semibold mb-2 text-neutral-700 dark:text-espresso-accent">
