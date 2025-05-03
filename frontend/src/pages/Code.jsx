@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "../styles/global.css";
 
 export default function Code() {
   const [contributions, setContributions] = useState([]);
