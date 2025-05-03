@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../styles/contributions.css";
 
 export default function Code() {
   const [contributions, setContributions] = useState([]);
