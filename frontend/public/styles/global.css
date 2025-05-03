@@ -1,203 +1,132 @@
-/* Global Styles */
-
+/* Base Typography & Transitions */
 html {
-    font-family: 'Satoshi', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-  }
+  font-family: 'Satoshi', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 main {
-    padding-top: .5rem!important;
+  padding-top: 0.5rem !important;
 }
-  
-  body {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  html.dark body {
-    background-color: #2B2A27; /* espresso-bg */
-    color: #F2E9DC; /* espresso-text */
-  }
-  
-  h1 {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 600;
-    margin: 1.5rem 0 0.75rem;
-  }
 
-  ul li {
-    margin-bottom: 0.4rem;
-  }
-  
-  .dark .text-blue-600 {
-    color: #D3A87C; /* espresso-accent override */
-  }  
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.75;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  html.dark p {
-    color: #B8B2A6; /* espresso-muted */
-  }
-  
-  a {
-    color: #2563eb; /* Tailwind's blue-600 */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  html.dark a {
-    color: #D3A87C; /* espresso-accent */
-  }
-  
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 2rem 0;
-  }
-  
-  html.dark hr {
-    border-top-color: #44413E; /* espresso-border */
-  }
+h1 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-  /* global.css */
+h2 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+}
 
-html {
-    font-family: 'Satoshi', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  body {
-    background-color: white;
-    color: black;
-  }
-  
-  html.dark body {
-    background-color: #2B2A27; /* espresso-bg */
-    color: #F2E9DC; /* espresso-text */
-  }
-  
-  h1 {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 600;
-    margin: 1.5rem 0 0.75rem;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.75;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  html.dark p {
-    color: #333;
-  }
-  
-  a {
-    color: #2563eb; /* Tailwind's blue-600 */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  html.dark a {
-    color: #D3A87C; /* espresso-accent */
-  }
-  
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 2rem 0;
-  }
-  
-  html.dark hr {
-    border-top-color: #44413E; /* espresso-border */
-  }
+ul li {
+  margin-bottom: 0.4rem;
+}
 
-  .card-shadow {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s;
-  }
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  color: #333;
+}
 
-  /* Contributions CSS */
-  
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-  .contribution-grid {
-    display: flex;
-    gap: 4px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  
-  .circle {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .level-0 { background-color: #e5e7eb; }
-  .level-1 { background-color: #c6f6d5; }
-  .level-2 { background-color: #9ae6b4; }
-  .level-3 { background-color: #68d391; }
-  .level-4 { background-color: #38a169; }
-  
-  .dark .level-0 { background-color: #4b5563; }
-  .dark .level-1 { background-color: #2f855a; }
-  .dark .level-2 { background-color: #276749; }
-  .dark .level-3 { background-color: #22543d; }
-  .dark .level-4 { background-color: #1c4532; }
-  
-  .axis-labels {
-    display: grid;
-    grid-template-columns: repeat(53, 1fr);
-    gap: 4px;
-    font-size: 0.75rem;
-    text-align: center;
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
-  
-  .day-labels {
-    display: grid;
-    grid-template-rows: repeat(7, 12px);
-    gap: 4px;
-    font-size: 0.75rem;
-    text-align: right;
-    color: #666;
-    margin-right: 0.5rem;
-  }  
-  
-  .circle {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out;
-  }  
-  
-  .circle:hover {
-    transform: scale(1.5);
-  }
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+/* Espresso Dark Mode Theme */
+html.dark body {
+  background-color: #2B2A27; /* espresso-bg */
+  color: #F2E9DC;           /* espresso-text */
+}
+
+html.dark p {
+  color: #B8B2A6;           /* espresso-muted */
+}
+
+html.dark a {
+  color: #D3A87C;           /* espresso-accent */
+}
+
+.dark .text-blue-600 {
+  color: #D3A87C;           /* override Tailwind blue */
+}
+
+html.dark hr {
+  border-top-color: #44413E; /* espresso-border */
+}
+
+/* Cards & Shadows */
+.card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s;
+}
+
+/* GitHub Contributions Chart */
+.contribution-grid {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.circle:hover {
+  transform: scale(1.5);
+}
+
+/* Contribution Levels */
+.level-0 { background-color: #e5e7eb; }
+.level-1 { background-color: #c6f6d5; }
+.level-2 { background-color: #9ae6b4; }
+.level-3 { background-color: #68d391; }
+.level-4 { background-color: #38a169; }
+
+.dark .level-0 { background-color: #4b5563; }
+.dark .level-1 { background-color: #2f855a; }
+.dark .level-2 { background-color: #276749; }
+.dark .level-3 { background-color: #22543d; }
+.dark .level-4 { background-color: #1c4532; }
+
+/* Contribution Axis Labels */
+.axis-labels {
+  display: grid;
+  grid-template-columns: repeat(53, 1fr);
+  gap: 4px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.day-labels {
+  display: grid;
+  grid-template-rows: repeat(7, 12px);
+  gap: 4px;
+  font-size: 0.75rem;
+  text-align: right;
+  color: #666;
+  margin-right: 0.5rem;
+}
