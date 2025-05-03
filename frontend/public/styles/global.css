@@ -4,6 +4,10 @@ html {
     font-family: 'Satoshi', sans-serif;
     transition: background-color 0.3s, color 0.3s;
   }
+
+main {
+    padding-top: .5rem!important;
+}
   
   body {
     background-color: white;
@@ -27,6 +31,14 @@ html {
     font-weight: 600;
     margin: 1.5rem 0 0.75rem;
   }
+
+  ul li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .dark .text-blue-600 {
+    color: #D3A87C; /* espresso-accent override */
+  }  
   
   p {
     font-size: 1rem;
@@ -132,12 +144,20 @@ html {
 
   /* Contributions CSS */
   
-  .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  .contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* 18 weeks */
+    grid-template-rows: repeat(7, 1fr); /* days */
+    gap: 2px;
+    max-width: 100%;
   }
+  
+  .circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+  }  
   
   .circle:hover {
     transform: scale(1.5);
@@ -154,12 +174,3 @@ html {
   .dark .level-2 { background-color: #276749; }
   .dark .level-3 { background-color: #22543d; }
   .dark .level-4 { background-color: #1c4532; }
-  
-  .contribution-grid {
-    display: grid;
-    grid-template-columns: repeat(53, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    gap: 4px;
-    max-width: 100%;
-  }
-  
