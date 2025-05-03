@@ -1,36 +1,52 @@
-export async function handler(event, context) {
-  const username = "kc2bj";
+export async function handler() {
+  const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+  const query = `
+    query {
+      viewer {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+                color
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
 
   try {
-    const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}`);
-    if (!res.ok) {
-      return {
-        statusCode: res.status,
-        body: JSON.stringify({ error: "Failed to fetch contributions" })
-      };
-    }
+    const response = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
 
-    const data = await res.json();
-    const oneYearAgo = new Date();
-    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-
-    // Flatten the weekly contributions into one array and filter by date
-    const contributions = data.weeks
+    const result = await response.json();
+    const days = result.data.viewer.contributionsCollection.contributionCalendar.weeks
       .flatMap(week => week.contributionDays)
-      .filter(day => new Date(day.date) >= oneYearAgo)
       .map(day => ({
         date: day.date,
         count: day.contributionCount,
+        color: day.color,
       }));
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ contributions })
+      body: JSON.stringify({ contributions: days }),
     };
-  } catch (err) {
+  } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: err.message })
+      body: JSON.stringify({ error: error.message }),
     };
   }
 }

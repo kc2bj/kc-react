@@ -146,13 +146,10 @@ html {
   
 
   .contribution-grid {
-    display: grid;
-    grid-template-columns: repeat(53, 1fr);
-    grid-auto-rows: 12px;
+    display: flex;
     gap: 4px;
-    max-width: 100%;
-    overflow-x: auto;
-    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
   
   .circle {

@@ -31,11 +31,18 @@ export default function Code() {
       </p>
 
       <div className="contribution-grid">
-        {weeks.map((week, wi) =>
-          week.map((day, di) => (
+      {weeks.map((week, wi) => (
+        <motion.div
+          key={`week-${wi}`}
+          className="flex flex-col gap-1"
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: wi * 0.02, duration: 0.3 }}
+        >
+          {week.map((day, di) => (
             <motion.div
               key={`${wi}-${di}`}
-              className={`circle level-${getLevel(day?.count || 0)}`}
+              className="circle"
               title={
                 day
                   ? `${new Date(day.date).toLocaleDateString(undefined, {
@@ -43,17 +50,22 @@ export default function Code() {
                       year: "numeric",
                       month: "short",
                       day: "numeric",
-                    })} — ${day.count} contribution${
-                      day.count !== 1 ? "s" : ""
-                    }`
+                    })} — ${day.count} contribution${day.count !== 1 ? "s" : ""}`
                   : ""
               }
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: (wi * 7 + di) * 0.002 }}
+              transition={{ delay: di * 0.005 }}
+              style={{
+                backgroundColor: day?.color || "#e5e7eb",
+                width: "10px",
+                height: "10px",
+                borderRadius: "50%",
+              }}
             />
-          ))
-        )}
+          ))}
+        </motion.div>
+      ))}
       </div>
 
       <div className="mt-10 bg-neutral-100 dark:bg-espresso-surface p-6 rounded-lg shadow-sm dark:shadow-none">
@@ -109,16 +121,6 @@ export default function Code() {
             Strengths: UX-first frontend architecture, design system integration, and headless CMS strategy
           </li>
         </ul>
-      </div>
-
-      <div className="mt-8 flex items-center gap-3 text-sm text-gray-500 dark:text-espresso-muted">
-        <span>Less</span>
-        <div className="flex gap-1">
-          {[0, 1, 2, 3, 4].map((level) => (
-            <div key={level} className={`circle level-${level}`} />
-          ))}
-        </div>
-        <span>More</span>
       </div>
 
       <div className="mt-10 text-sm text-gray-600 dark:text-espresso-muted">
