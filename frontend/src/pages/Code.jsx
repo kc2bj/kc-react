@@ -16,6 +16,7 @@ export default function Code() {
   }, []);
 
   const weeks = groupByWeeks(contributions);
+  const months = getMonthLabels(weeks);
 
   return (
     <motion.section
@@ -30,62 +31,77 @@ export default function Code() {
         This visualization shows my open-source activity over the past year. Each dot represents daily contributions. Data is pulled live from the GitHub GraphQL API.
       </p>
 
-      <div className="contribution-grid">
-      {weeks.map((week, wi) => (
-        <motion.div
-          key={`week-${wi}`}
-          className="flex flex-col gap-1"
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: wi * 0.02, duration: 0.3 }}
-        >
-          {week.map((day, di) => (
-            <motion.div
-              key={`${wi}-${di}`}
-              className="circle"
-              title={
-                day
-                  ? `${new Date(day.date).toLocaleDateString(undefined, {
-                      weekday: "short",
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })} — ${day.count} contribution${day.count !== 1 ? "s" : ""}`
-                  : ""
-              }
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: di * 0.005 }}
-              style={{
-                backgroundColor: day?.color || "#e5e7eb",
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-              }}
-            />
-          ))}
-        </motion.div>
-      ))}
+      {/* Grid Labels */}
+      <div className="overflow-x-auto">
+        <div className="relative">
+          <div className="ml-10 flex space-x-1 mb-1 text-xs text-gray-500 dark:text-espresso-muted">
+            {months.map((month, i) => (
+              <span key={i} style={{ minWidth: "12px" }}>
+                {month}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex">
+            {/* Weekday labels */}
+            <div className="flex flex-col space-y-1 mr-2 text-xs text-gray-500 dark:text-espresso-muted pt-5">
+              <span>Mon</span>
+              <span>Wed</span>
+              <span>Fri</span>
+            </div>
+
+            {/* Contribution Grid */}
+            <div className="grid grid-cols-53 gap-[2px]">
+              {weeks.map((week, wi) => (
+                <div key={wi} className="flex flex-col gap-[2px]">
+                  {week.map((day, di) => (
+                    <motion.div
+                      key={`${wi}-${di}`}
+                      className={`circle level-${getLevel(day?.count || 0)}`}
+                      title={
+                        day
+                          ? `${new Date(day.date).toLocaleDateString(undefined, {
+                              weekday: "short",
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                            })} — ${day.count} contribution${day.count !== 1 ? "s" : ""}`
+                          : ""
+                      }
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ delay: (wi * 7 + di) * 0.002 }}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
+      {/* Recap Section */}
       <div className="mt-10 bg-neutral-100 dark:bg-espresso-surface p-6 rounded-lg shadow-sm dark:shadow-none">
         <h3 className="text-2xl font-semibold mb-2 text-black dark:text-espresso-text">
           Code Contribution Recap
         </h3>
         <ul className="text-sm text-gray-700 dark:text-espresso-muted leading-relaxed list-disc ml-5 space-y-2">
-          <li>
-            <strong>784 contributions</strong> in the past year across 8 repositories
-          </li>
-          <li>
-            <strong>69% Commits, 31% Pull Requests</strong> – feature development & collaboration
-          </li>
-          <li>
-            Tech stack includes <strong>Drupal</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Vite</strong>, <strong>Acquia</strong>, <strong>Netlify</strong>
-          </li>
-          <li>
-            Strengths: UX-first frontend architecture, design system integration, and headless CMS strategy
-          </li>
+          <li><strong>784 contributions</strong> in the past year across 8 repositories</li>
+          <li><strong>69% Commits</strong>, <strong>31% Pull Requests</strong> – feature development & collaboration</li>
+          <li>Tech stack includes <strong>Drupal</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Vite</strong>, <strong>Acquia</strong>, <strong>Netlify</strong></li>
+          <li>Strengths: UX-first frontend architecture, design system integration, and headless CMS strategy</li>
         </ul>
+      </div>
+
+      {/* Legend */}
+      <div className="mt-8 flex items-center gap-3 text-sm text-gray-500 dark:text-espresso-muted">
+        <span>Less</span>
+        <div className="flex gap-1">
+          {[0, 1, 2, 3, 4].map((level) => (
+            <div key={level} className={`circle level-${level}`} />
+          ))}
+        </div>
+        <span>More</span>
       </div>
 
       <div className="mt-10 text-sm text-gray-600 dark:text-espresso-muted">
@@ -105,6 +121,7 @@ export default function Code() {
   );
 }
 
+// Helper functions
 function getLevel(count) {
   if (count === 0) return 0;
   if (count < 3) return 1;
@@ -114,17 +131,19 @@ function getLevel(count) {
 }
 
 function groupByWeeks(data) {
-  const weeks = Array(53)
-    .fill(null)
-    .map(() => Array(7).fill(null));
+  const weeks = Array(53).fill(null).map(() => Array(7).fill(null));
+  const now = new Date();
+  const lastYear = new Date(now);
+  lastYear.setFullYear(lastYear.getFullYear() - 1);
 
   data.forEach((day) => {
     const date = new Date(day.date);
-    const dayOfWeek = date.getUTCDay(); // Sunday = 0
-    const week = getWeekNumber(date) - 1;
-
-    if (weeks[week] && typeof dayOfWeek === "number") {
-      weeks[week][dayOfWeek] = day;
+    if (date >= lastYear && date <= now) {
+      const dayOfWeek = date.getUTCDay();
+      const week = getWeekNumber(date) - getWeekNumber(lastYear);
+      if (weeks[week] && typeof dayOfWeek === "number") {
+        weeks[week][dayOfWeek] = day;
+      }
     }
   });
 
@@ -137,4 +156,22 @@ function getWeekNumber(date) {
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+}
+
+function getMonthLabels(weeks) {
+  const labels = [];
+  weeks.forEach((week, i) => {
+    const firstDay = week.find(Boolean);
+    if (firstDay) {
+      const month = new Date(firstDay.date).toLocaleString("default", { month: "short" });
+      if (labels[labels.length - 1] !== month) {
+        labels[i] = month;
+      } else {
+        labels[i] = "";
+      }
+    } else {
+      labels[i] = "";
+    }
+  });
+  return labels;
 }
