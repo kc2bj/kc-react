@@ -4,7 +4,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Code from './pages/Code';
-import Code from './pages/About';
+import About from './pages/About';
 
 function AnimatedRoutes() {
   const location = useLocation();
