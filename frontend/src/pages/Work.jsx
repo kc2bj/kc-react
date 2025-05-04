@@ -5,8 +5,8 @@ export default function Work() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "http://kris-portfolio.lndo.site/jsonapi/node/work?include=field_thumbnail_image.field_media_image",
+  const apiBase = import.meta.env.VITE_API_URL;
+    fetch(`${apiBase}/node/work?include=field_thumbnail_image.field_media_image`,
       {
         headers: {
           Accept: "application/vnd.api+json",
@@ -28,8 +28,8 @@ export default function Work() {
             (item) => item.type === "file--file" && item.id === fileId
           );
           return file?.attributes?.uri?.url
-            ? "http://kris-portfolio.lndo.site" + file.attributes.uri.url
-            : null;
+        ? apiBase.replace("/jsonapi", "") + file.attributes.uri.url
+        : null;
         };
 
         const formatted = data.data.map((item) => ({

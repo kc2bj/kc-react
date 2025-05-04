@@ -1,0 +1,37 @@
+# Ignore core and contrib files if using Composer
+/vendor/
+/core/
+/modules/contrib/
+/themes/contrib/
+/profiles/contrib/
+/libraries/
+
+# Ignore generated files and settings
+/sites/*/files/*
+!/sites/*/files/.gitkeep
+/sites/*/settings*.php
+/sites/*/services.yml
+/sites/*/services.local.yml
+/sites/*/settings.local.php
+
+# Ignore config sync if storing elsewhere
+/sites/*/config_*/**
+
+# Ignore backup and IDE files
+*.bak
+*.swp
+*.swo
+*.orig
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Node/npm artifacts if present
+node_modules/
+npm-debug.log
+
+# Ignore test output
+/phpunit.xml
+/test-output/
