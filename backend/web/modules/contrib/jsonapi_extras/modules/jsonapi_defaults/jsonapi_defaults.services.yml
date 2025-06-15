@@ -1,3 +1,0 @@
-services:
-  jsonapi_defaults_includes:
-    class: Drupal\jsonapi_defaults\JsonapiDefaults
