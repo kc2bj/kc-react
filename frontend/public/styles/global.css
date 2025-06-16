@@ -130,3 +130,31 @@ html.dark hr {
   color: #666;
   margin-right: 0.5rem;
 }
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 #B4530988;
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 32px #B4530922;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.pulse-ring {
+  position: relative;
+}
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 6px solid #B45309; /* text-yellow-800 */
+  box-sizing: border-box;
+  z-index: 0;
+  animation: pulse-slow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
