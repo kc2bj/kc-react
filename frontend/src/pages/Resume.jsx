@@ -62,6 +62,69 @@ const Resume = () => {
               <li>Created comprehensive design system to ensure consistency across platform</li>
               <li>Led cross-functional collaboration between product, development, and marketing teams</li>
             </ul>
+            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
+              <li>Conducted in-depth user research to identify customer needs and pain points</li>
+              <li>Created user flows, wireframes, and high-fidelity prototypes</li>
+              <li>Implemented and analyzed user testing sessions</li>
+              <li>Developed and maintained design documentation and specifications</li>
+            </ul>
+          </div>
+        </div>
+        {/* UVA Information Security */}
+        <div className="mb-8">
+          <div className="font-bold">UVA Information Security <span className="font-normal">/ Communications Specialist</span></div>
+          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
+            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Charlottesville, VA • 2016 – 2017</div>
+            <div className="mb-2 text-gray-800 dark:text-gray-200">Led digital communications and web presence for UVA's Information Security division, focusing on translating complex cybersecurity concepts into accessible content for the university community. Managed comprehensive communication strategies while collaborating with technical teams to ensure accurate and engaging content delivery.</div>
+            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
+              <li>Designed and launched new Information Security website improving user engagement</li>
+              <li>Led creation of cybersecurity awareness campaign reaching 40,000+ university members</li>
+              <li>Streamlined communication processes reducing project delivery time</li>
+            </ul>
+            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
+              <li>Managed end-to-end website redesign using HTML, CSS, and UX best practices</li>
+              <li>Created and implemented comprehensive communication strategies</li>
+              <li>Produced multimedia content including videos, graphics, and digital materials</li>
+              <li>Collaborated with IT teams to translate technical content for general audiences</li>
+            </ul>
+          </div>
+        </div>
+        {/* GMU Orientation & Family Programs */}
+        <div className="mb-8">
+          <div className="font-bold">George Mason University Orientation & Family Programs <span className="font-normal">/ Communications Officer</span></div>
+          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
+            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Fairfax, VA • 2014 – 2016</div>
+            <div className="mb-2 text-gray-800 dark:text-gray-200">Directed digital strategy and team management for GMU's Orientation & Family Programs, overseeing all aspects of print and digital communications. Led creative direction while maintaining consistent branding and messaging across multiple platforms and initiatives.</div>
+            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
+              <li>Increased social media engagement through strategic content planning</li>
+              <li>Reduced print costs through digital transformation initiatives</li>
+              <li>Successfully managed redesign of Orientation Guide improving student engagement and feedback</li>
+            </ul>
+            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
+              <li>Led team of designers and content creators for orientation and family engagement communications</li>
+              <li>Managed digital presence including websites and social media platforms</li>
+              <li>Developed and implemented strategic communication plans</li>
+              <li>Coordinated with multiple departments for integrated marketing efforts</li>
+            </ul>
+          </div>
+        </div>
+        {/* Freelance Graphic Designer & Marketing Communications Consultant */}
+        <div className="mb-8">
+          <div className="font-bold">Freelance Graphic Designer & Marketing Communications Consultant <span className="font-normal">/ Northern Virginia & Central Virginia</span></div>
+          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
+            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">2008 – 2017</div>
+            <div className="mb-2 text-gray-800 dark:text-gray-200">Provided comprehensive design services for diverse clients across Virginia, specializing in brand development, responsive web design, and digital marketing solutions. Built long-term client relationships while delivering high-quality design solutions that met business objectives.</div>
+            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
+            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
+              <li>Designed and launched 15+ responsive websites</li>
+              <li>Created brand identities for 20+ small businesses</li>
+              <li>Developed digital marketing strategies for local organizations</li>
+            </ul>
           </div>
         </div>
       </section>
