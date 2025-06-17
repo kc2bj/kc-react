@@ -13,6 +13,11 @@ const Resume = () => {
       <div className="mb-8">
         <h1 className="text-4xl font-bold">Kris Celeste</h1>
         <h2 className="text-xl text-yellow-800 font-semibold mb-2">Senior UI/UX Designer & Developer</h2>
+        <div className="mb-4">
+          <p className="italic text-sm text-neutral-600 dark:text-espresso-muted">
+            Arranger | Responsibility | Relator | Achiever | Positivity
+          </p>
+        </div>
       </div>
 
       {/* Professional Summary */}

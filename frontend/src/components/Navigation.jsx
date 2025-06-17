@@ -39,6 +39,7 @@ export default function Navigation() {
           <li><NavLink to="/work" className={linkClasses}>Work</NavLink></li>
           <li><NavLink to="/code" className={linkClasses}>Code</NavLink></li>
           <li><NavLink to="/resume" className={linkClasses}>Resume</NavLink></li>
+          <li><NavLink to="/contact" className={linkClasses}>Contact</NavLink></li>
         </ul>
 
         {/* Grouped: Dark Mode Toggle + Badges */}
@@ -99,6 +100,7 @@ export default function Navigation() {
           <li><NavLink to="/work" className={linkClasses}>Work</NavLink></li>
           <li><NavLink to="/code" className={linkClasses}>Code</NavLink></li>
           <li><NavLink to="/resume" className={linkClasses}>Resume</NavLink></li>
+          <li><NavLink to="/contact" className={linkClasses}>Contact</NavLink></li>
           </ul>
         </div>
       )}

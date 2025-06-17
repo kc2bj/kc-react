@@ -11,25 +11,17 @@ export default function About() {
     >
       <h2 className="text-4xl font-bold mb-6">About Me</h2>
 
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-2 text-neutral-700 dark:text-espresso-accent">
-          Signature Strengths by StrengthsFinder®
-        </h3>
-        <p className="italic text-sm text-neutral-600 dark:text-espresso-muted">
-          Arranger | Responsibility | Relator | Achiever | Positivity
-        </p>
-      </div>
-
       <p className="mb-4">
-        I’m a UI/UX Designer and Developer based in Charlottesville, VA, currently leading design and development initiatives in central Virginia. With over 15 years of combined experience in design, development, and communications, I specialize in creating user-centered digital solutions and implementing them with clean, efficient code.
+        I was born in the Philippines and came to America at the age of 5. I am ethnically Filipino but grew up in the American suburbs of Virginia, and became a naturalized American citizen in my late 20s.
       </p>
-
       <p className="mb-4">
-        My career spans agency, in-house, and entrepreneurial roles, including founding The iAM Group, where I led a team providing brand and digital solutions for non-profit organizations. My technical expertise includes UX design, frontend development, and Drupal implementation, complemented by a background in marketing communications and brand strategy.
+        I am married to my wife, whom I met in college, and together we have four amazing kids ranging from 12 years to 4 years old. Family is at the heart of everything I do.
       </p>
-
       <p className="mb-4">
-        I hold a BA in Graphic Design from George Mason University (2010), where I began my freelance practice serving both commercial and non-profit clients. This early entrepreneurial experience laid the foundation for my holistic approach to digital solutions.
+        I'm a huge Washington Commanders fan (#RaiseHail) and love the energy of game day. As a kid, I dreamed of being a Disney cartoonist and was close to joining Disney Studios during the pandemic, but a restructuring removed the position I was interviewing for.
+      </p>
+      <p className="mb-4">
+        I enjoy the nostalgia of revisiting classic movies and miss the excitement of seeing blockbuster films on opening nights. Whether it's drawing, cheering for my team, or spending time with my family, I try to bring passion and positivity to everything I do.
       </p>
 
       <p className="mb-6">
