@@ -36,7 +36,7 @@ export default function Navigation() {
         {/* Desktop pills */}
         <ul className="hidden sm:flex gap-4 text-neutral-800 text-sm">
           <li><NavLink to="/about" className={linkClasses}>About</NavLink></li>
-          <li><a href="https://theiamgroup.org/web" target="_blank" rel="noopener noreferrer" className="px-3 py-1 rounded-full transition relative overflow-hidden no-underline hover:no-underline hover:bg-espresso-leaf hover:text-white dark:hover:bg-espresso-leaf dark:hover:text-white">Work</a></li>g
+          <li><a href="https://theiamgroup.org/web" target="_blank" rel="noopener noreferrer" className="px-3 py-1 rounded-full transition relative overflow-hidden no-underline hover:no-underline hover:bg-espresso-leaf hover:text-white dark:hover:bg-espresso-leaf dark:hover:text-white">Work</a></li>
           <li><NavLink to="/code" className={linkClasses}>Code</NavLink></li>
           <li><NavLink to="/resume" className={linkClasses}>Resume</NavLink></li>
           <li><NavLink to="/contact" className={linkClasses}>Contact</NavLink></li>
