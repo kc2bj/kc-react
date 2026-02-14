@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
@@ -7,175 +7,280 @@ const Resume = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="max-w-3xl mx-auto px-4 py-10 font-sans"
+      className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-10 font-sans"
     >
-      {/* Contact & Title */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold">Kris Celeste</h1>
-        <h2 className="text-xl text-yellow-800 font-semibold mb-2">Senior UI/UX Designer & Developer</h2>
-        <div className="mb-4">
-          <p className="italic text-sm text-neutral-600 dark:text-espresso-muted">
-            Arranger | Responsibility | Relator | Achiever | Positivity
-          </p>
+      {/* Header: name + headline */}
+      <header className="mb-10">
+        <h1 className="text-4xl font-bold text-neutral-900 dark:text-espresso-cream">
+          Kris Celeste
+        </h1>
+        <p className="text-lg text-espresso-leaf dark:text-espresso-leaf font-semibold mt-1 mb-2">
+          UX Engineer · Technical Lead–Level Problem Solver · Drupal & Cloud Architecture · Founder, iAM Group, LLC
+        </p>
+        <p className="text-sm text-neutral-600 dark:text-espresso-muted">
+          UI/UX Designer & Web Developer at UVA Information Technology Services · Charlottesville, Virginia
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
+        {/* Left: Summary + Experience (2/3) */}
+        <div className="lg:col-span-2 space-y-10">
+          {/* Professional Summary */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-espresso-cream border-b border-neutral-200 dark:border-neutral-700 pb-2">
+              Professional Summary
+            </h2>
+            <p className="text-neutral-700 dark:text-espresso-cream/90 leading-relaxed">
+              For me, UX is equal parts design, engineering, and humanity. I've spent 15+ years leading design and development for complex systems—from enterprise applications to generative AI products. I combine user research, design systems, and production-ready frontend architecture to deliver solutions that scale and stay accessible.
+            </p>
+            <p className="text-sm text-neutral-500 dark:text-espresso-muted mt-2">
+              Total experience: 16+ years
+            </p>
+          </section>
+
+          {/* Experience */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-6 text-neutral-900 dark:text-espresso-cream border-b border-neutral-200 dark:border-neutral-700 pb-2">
+              Experience
+            </h2>
+
+            {/* UVA ITS - Current */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                UVA Information Technology Services (UVA ITS)
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / UI/UX Designer & Web Developer</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Dec 2018 – Present · Charlottesville, VA</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3 space-y-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  Led UX design initiatives for complex enterprise applications, delivering user-centered solutions that enhanced operational efficiency and user satisfaction.
+                </p>
+                <div>
+                  <span className="font-semibold text-neutral-800 dark:text-espresso-cream text-sm">Design:</span>
+                  <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm mt-1 space-y-0.5 ml-2">
+                    <li>Led UX/UI design for UVA's first generative AI solution (UVA Chat+)</li>
+                    <li>Conducted comprehensive user research and usability testing</li>
+                    <li>Created and maintained design systems and component libraries</li>
+                    <li>Generated ~$100k revenue through UX/UI improvements</li>
+                  </ul>
+                </div>
+                <div>
+                  <span className="font-semibold text-neutral-800 dark:text-espresso-cream text-sm">Development:</span>
+                  <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm mt-1 space-y-0.5 ml-2">
+                    <li>Implemented responsive frontend architecture using TypeScript</li>
+                    <li>Built reusable component libraries in multiple frameworks</li>
+                    <li>Developed accessible HTML/CSS frameworks</li>
+                    <li>Built and managed Drupal applications</li>
+                  </ul>
+                </div>
+                <div>
+                  <span className="font-semibold text-neutral-800 dark:text-espresso-cream text-sm">Core responsibilities:</span>
+                  <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm mt-1 space-y-0.5 ml-2">
+                    <li>Lead end-to-end UX design processes</li>
+                    <li>Develop frontend architecture and implementations</li>
+                    <li>Write production-ready HTML, CSS, and JavaScript</li>
+                    <li>Mentor junior developers</li>
+                    <li>Champion accessibility standards and responsive design</li>
+                    <li>Provide technical leadership for Drupal CMS projects</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Crutchfield */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                Crutchfield Corporation
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / UX Designer</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Dec 2017 – Nov 2018</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  UX design for e-commerce, focusing on customer experience and conversion. Design · Specialist level.
+                </p>
+              </div>
+            </div>
+
+            {/* UVA ITS - Communications */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                UVA Information Technology Services
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Communications Specialist</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Nov 2016 – Nov 2017 · Charlottesville, VA</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3 space-y-2">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  Led digital communications and web presence for UVA's Information Security division, translating complex cybersecurity concepts into accessible content for the university community.
+                </p>
+                <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm space-y-0.5 ml-2">
+                  <li>Designed and launched new Information Security website improving user engagement</li>
+                  <li>Led cybersecurity awareness campaign reaching 40,000+ university members</li>
+                  <li>Streamlined communication processes reducing project delivery time</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* GMU Communications Officer */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                George Mason University
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Communications Officer</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Oct 2014 – Oct 2016</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  Marketing · Specialist level. Digital strategy and communications for orientation and family programs.
+                </p>
+              </div>
+            </div>
+
+            {/* Freelance */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                Self-Employed
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Freelance Graphic Designer & Marketing Communications Consultant</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Jul 2008 – Oct 2017</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3 space-y-2">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  Comprehensive design services across Virginia: brand development, responsive web design, and digital marketing. Built long-term client relationships and met business objectives.
+                </p>
+                <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm space-y-0.5 ml-2">
+                  <li>Designed and launched 15+ responsive websites</li>
+                  <li>Created brand identities for 20+ small businesses</li>
+                  <li>Developed digital marketing strategies for local organizations</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Centerpointe Church */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                Centerpointe Church at Fair Oaks
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Communications Director</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Aug 2011 – Sep 2014</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">
+                  Marketing · Director level.
+                </p>
+              </div>
+            </div>
+
+            {/* Outside the Lab */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                Outside the Lab
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Graphic Designer</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Apr 2009 – Aug 2010</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">Design · Specialist level.</p>
+              </div>
+            </div>
+
+            {/* GMU Graphic Designer */}
+            <div className="mb-8">
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream">
+                George Mason University
+                <span className="font-normal text-neutral-700 dark:text-espresso-cream/90"> / Graphic Designer</span>
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-espresso-muted mt-0.5">Jun 2008 – Aug 2010</div>
+              <div className="pl-4 border-l-4 border-espresso-leaf dark:border-espresso-leaf mt-3">
+                <p className="text-neutral-700 dark:text-espresso-cream/90 text-sm">Design · Specialist level.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Right: Education, Certifications, Skills (1/3) */}
+        <div className="lg:col-span-1 space-y-8">
+          {/* Education */}
+          <section>
+            <h2 className="text-xl font-semibold mb-3 text-neutral-900 dark:text-espresso-cream border-b border-neutral-200 dark:border-neutral-700 pb-2">
+              Education
+            </h2>
+            <div>
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream text-sm">
+                George Mason University
+              </div>
+              <div className="text-neutral-700 dark:text-espresso-cream/90 text-sm mt-0.5">
+                Bachelor of Arts (BA), Design · Minor in Multimedia Design, Art and Visual Technology
+              </div>
+              <div className="text-neutral-500 dark:text-espresso-muted text-xs mt-1">
+                2005 – 2010 · Fairfax, VA
+              </div>
+            </div>
+          </section>
+
+          {/* Licenses & Certifications */}
+          <section>
+            <h2 className="text-xl font-semibold mb-3 text-neutral-900 dark:text-espresso-cream border-b border-neutral-200 dark:border-neutral-700 pb-2">
+              Licenses & Certifications
+            </h2>
+            <div>
+              <div className="font-bold text-neutral-900 dark:text-espresso-cream text-sm">
+                Human-Computer Interaction (HCI) for User Experience Design
+              </div>
+              <div className="text-neutral-700 dark:text-espresso-cream/90 text-sm mt-0.5">
+                MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)
+              </div>
+              <div className="text-neutral-500 dark:text-espresso-muted text-xs mt-1">
+                Issued Nov 2024
+              </div>
+              <a
+                href="https://mitcsail.credential.getsmarter.com/963c43ed-6621-4e17-8866-856b7b850b22?trk=public_profile_certification-title"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-sm text-espresso-leaf dark:text-espresso-leaf hover:underline"
+              >
+                View certificate
+              </a>
+            </div>
+          </section>
+
+          {/* Skills / Core competencies */}
+          <section>
+            <h2 className="text-xl font-semibold mb-3 text-neutral-900 dark:text-espresso-cream border-b border-neutral-200 dark:border-neutral-700 pb-2">
+              Skills
+            </h2>
+            <div className="space-y-3 text-sm">
+              <div>
+                <span className="font-semibold text-neutral-800 dark:text-espresso-cream">Design & UX:</span>
+                <p className="text-neutral-700 dark:text-espresso-cream/90 mt-0.5">
+                  UX design · UI design · User research · Usability testing · Design systems · Responsive design · Accessibility
+                </p>
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-800 dark:text-espresso-cream">Technical:</span>
+                <p className="text-neutral-700 dark:text-espresso-cream/90 mt-0.5">
+                  TypeScript · JavaScript · HTML · CSS · Drupal · CMS · Frontend architecture · Technical leadership
+                </p>
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-800 dark:text-espresso-cream">Other:</span>
+                <p className="text-neutral-700 dark:text-espresso-cream/90 mt-0.5">
+                  Communications · Digital marketing · Brand development · Project delivery · Best practices
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
-      {/* Professional Summary */}
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-4 mt-10">Professional Summary</h3>
-        <p className="text-gray-800 dark:text-gray-200">
-          Senior UI/UX Designer with 6+ years of experience leading design for complex web applications and custom software solutions. Proven track record of collaborating with stakeholders to deliver user-centered solutions that drive business value. Demonstrated success in conducting user research, creating comprehensive design systems, and mentoring junior designers. Experienced in leading end-to-end UX processes while fostering collaborative partnerships with clients and development teams.
-        </p>
-      </section>
-
-      {/* Experience */}
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-4 mt-10">Experience</h3>
-        {/* UVA ITS-CACS */}
-        <div className="mb-8">
-          <div className="font-bold">UVA ITS-CACS <span className="font-normal">/ UX/UI Designer and Web Developer</span></div>
-          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
-            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Charlottesville, VA • DEC 2018 – PRESENT</div>
-            <div className="mb-2 text-gray-800 dark:text-gray-200">Led UX design initiatives for complex enterprise applications, delivering user-centered solutions that enhanced operational efficiency and user satisfaction.</div>
-            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
-              <li>Spearheaded UI design for UVA's first generative AI solution (UVA Chat+), leading research, prototyping, and implementation phases</li>
-              <li>Generated ~$100,000 in additional revenue through strategic UI/UX service improvements and optimizations during the 2023-2024 fiscal year for CACS</li>
-              <li>Led the implementation of design systems and component libraries, improving design consistency and development efficiency for the Vice President for Research's websites</li>
-              <li>Conducted comprehensive user research and usability testing, resulting in measurable improvements in user satisfaction and task completion rates for UVA's Claude Moore Health Sciences Library</li>
-            </ul>
-            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
-              <li>Lead end-to-end UX design processes for complex web applications, from discovery through implementation</li>
-              <li>Mentor junior developers and designers, fostering a culture of continuous learning and design excellence</li>
-              <li>Collaborate with stakeholders to gather requirements and implement solutions that meet business objectives</li>
-              <li>Champion accessibility standards and responsive design principles across all projects</li>
-              <li>Provide technical leadership for Drupal CMS projects, ensuring alignment with UX best practices</li>
-            </ul>
-          </div>
-        </div>
-        {/* Crutchfield Corporation */}
-        <div className="mb-8">
-          <div className="font-bold">Crutchfield Corporation <span className="font-normal">/ UX Designer</span></div>
-          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
-            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Charlottesville, VA • DEC 2017 – NOV 2018</div>
-            <div className="mb-2 text-gray-800 dark:text-gray-200">Conducted in-depth user led UX design initiatives for Crutchfield's e-commerce platform, focusing on improving customer experience and conversion rates.</div>
-            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
-              <li>Redesigned key user journeys resulting in improved conversion rates and reduced bounce rates</li>
-              <li>Implemented data-driven A/B testing program to optimize user experiences</li>
-              <li>Created comprehensive design system to ensure consistency across platform</li>
-              <li>Led cross-functional collaboration between product, development, and marketing teams</li>
-            </ul>
-            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
-              <li>Conducted in-depth user research to identify customer needs and pain points</li>
-              <li>Created user flows, wireframes, and high-fidelity prototypes</li>
-              <li>Implemented and analyzed user testing sessions</li>
-              <li>Developed and maintained design documentation and specifications</li>
-            </ul>
-          </div>
-        </div>
-        {/* UVA Information Security */}
-        <div className="mb-8">
-          <div className="font-bold">UVA Information Security <span className="font-normal">/ Communications Specialist</span></div>
-          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
-            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Charlottesville, VA • 2016 – 2017</div>
-            <div className="mb-2 text-gray-800 dark:text-gray-200">Led digital communications and web presence for UVA's Information Security division, focusing on translating complex cybersecurity concepts into accessible content for the university community. Managed comprehensive communication strategies while collaborating with technical teams to ensure accurate and engaging content delivery.</div>
-            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
-              <li>Designed and launched new Information Security website improving user engagement</li>
-              <li>Led creation of cybersecurity awareness campaign reaching 40,000+ university members</li>
-              <li>Streamlined communication processes reducing project delivery time</li>
-            </ul>
-            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
-              <li>Managed end-to-end website redesign using HTML, CSS, and UX best practices</li>
-              <li>Created and implemented comprehensive communication strategies</li>
-              <li>Produced multimedia content including videos, graphics, and digital materials</li>
-              <li>Collaborated with IT teams to translate technical content for general audiences</li>
-            </ul>
-          </div>
-        </div>
-        {/* GMU Orientation & Family Programs */}
-        <div className="mb-8">
-          <div className="font-bold">George Mason University Orientation & Family Programs <span className="font-normal">/ Communications Officer</span></div>
-          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
-            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">Fairfax, VA • 2014 – 2016</div>
-            <div className="mb-2 text-gray-800 dark:text-gray-200">Directed digital strategy and team management for GMU's Orientation & Family Programs, overseeing all aspects of print and digital communications. Led creative direction while maintaining consistent branding and messaging across multiple platforms and initiatives.</div>
-            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
-              <li>Increased social media engagement through strategic content planning</li>
-              <li>Reduced print costs through digital transformation initiatives</li>
-              <li>Successfully managed redesign of Orientation Guide improving student engagement and feedback</li>
-            </ul>
-            <div className="font-semibold mt-4 mb-1">Core Responsibilities:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm ml-4">
-              <li>Led team of designers and content creators for orientation and family engagement communications</li>
-              <li>Managed digital presence including websites and social media platforms</li>
-              <li>Developed and implemented strategic communication plans</li>
-              <li>Coordinated with multiple departments for integrated marketing efforts</li>
-            </ul>
-          </div>
-        </div>
-        {/* Freelance Graphic Designer & Marketing Communications Consultant */}
-        <div className="mb-8">
-          <div className="font-bold">Freelance Graphic Designer & Marketing Communications Consultant <span className="font-normal">/ Northern Virginia & Central Virginia</span></div>
-          <div className="pl-4 border-l-4 border-yellow-800 mt-1">
-            <div className="text-gray-700 text-sm mb-1 mt-1 dark:text-gray-400">2008 – 2017</div>
-            <div className="mb-2 text-gray-800 dark:text-gray-200">Provided comprehensive design services for diverse clients across Virginia, specializing in brand development, responsive web design, and digital marketing solutions. Built long-term client relationships while delivering high-quality design solutions that met business objectives.</div>
-            <div className="font-semibold mt-3 mb-1">Key Achievements:</div>
-            <ul className="list-disc list-inside text-gray-800 dark:text-gray-200 text-sm mb-3 ml-4">
-              <li>Designed and launched 15+ responsive websites</li>
-              <li>Created brand identities for 20+ small businesses</li>
-              <li>Developed digital marketing strategies for local organizations</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Education & Certifications */}
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-4 mt-10">Education & Certifications</h3>
-        <div className="mb-2">
-          <span className="font-bold">George Mason University</span> / BA<br />
-          <span className="text-gray-700 text-sm dark:text-gray-400">2006 - 2010</span><br />
-          <span className="text-gray-800 text-sm">Art & Visual Technology w/ Minor in Multimedia</span>
-        </div>
-        <div>
-          <span className="font-bold">MIT CSAIL</span> / Online 6-Week Course<br />
-          <span className="text-gray-800 text-sm">Certificate in Human-Computer Interaction for User Experience Design</span><br />
-          <span className="text-gray-700 text-sm dark:text-gray-400">Nov 2024</span>
-        </div>
-      </section>
-
-      {/* Core Competencies */}
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-4 mt-10">Core Competencies</h3>
-        <div className="mb-2">
-          <span className="font-bold">Design Leadership & Methods:</span> <span className="text-gray-800 dark:text-gray-200">User Experience (UX) Design • User Research & Usability Testing • Wireframing & Prototyping • Information Architecture • Design System Development • A/B Testing & Analytics</span>
-        </div>
-        <div className="mb-2">
-          <span className="font-bold">Technical Skills:</span> <span className="text-gray-800 dark:text-gray-200">Frontend Development (TypeScript, JavaScript, CSS, HTML) • CMS Platforms (Drupal, WordPress) • Responsive Web Design • Accessibility Standards</span>
-        </div>
-        <div>
-          <span className="font-bold">Tools & Platforms:</span> <span className="text-gray-800 dark:text-gray-200">Design Tools: Figma, Adobe Creative Suite • Project Management: Jira, Confluence, Trello • Development Tools: Git, VS Code • Analytics Platforms</span>
-        </div>
-      </section>
-
-      {/* LinkedIn Button */}
-      <div className="mt-8 text-center">
+      {/* LinkedIn CTA */}
+      <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-700 text-center">
         <a
-          href="https://www.linkedin.com/in/krisceleste/"
+          href="https://www.linkedin.com/in/krisceleste"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="inline-flex items-center gap-2 rounded-full bg-espresso-leaf px-6 py-3 text-white font-medium no-underline hover:opacity-90 transition"
         >
-          View LinkedIn Profile
+          View full profile on LinkedIn
         </a>
       </div>
     </motion.div>
   );
 };
 
-export default Resume; 
+export default Resume;
