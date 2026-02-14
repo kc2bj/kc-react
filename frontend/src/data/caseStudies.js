@@ -448,6 +448,160 @@ Level Four:  │   └── animalcare.research.virginia.edu/oaw/training`,
       },
     ],
   },
+  {
+    slug: "hooslist",
+    title: "HoosList Schedule View",
+    description: "Performance Optimization & UX Engineering in Drupal",
+    blocks: [
+      { type: "heading", level: 2, text: "Project Summary" },
+      {
+        type: "paragraph",
+        text: "Led the UX and frontend architecture for a high-traffic academic scheduling system serving thousands of students, faculty, and advisors. Re-architected the data layer and Drupal Views implementation to significantly improve performance, stability, and usability during peak registration periods.",
+      },
+      { type: "heading", level: 2, text: "The Challenge" },
+      {
+        type: "paragraph",
+        text: "The existing schedule interface relied on live entity queries with multiple relational joins. During high-concurrency events (course registration windows), this caused:",
+      },
+      {
+        type: "list",
+        items: [
+          "Expensive SQL queries",
+          "Increased database strain",
+          "Slower render times",
+          "Inconsistent performance under load",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The system needed to scale reliably without replacing Drupal or adding unnecessary infrastructure complexity.",
+      },
+      { type: "heading", level: 2, text: "The Solution" },
+      { type: "heading", level: 3, text: "Snapshot-Based Data Architecture" },
+      {
+        type: "paragraph",
+        text: "Designed and implemented a denormalized snapshot table to serve as the primary data source for the schedule View.",
+      },
+      { type: "heading", level: 3, text: "Key engineering decisions:" },
+      {
+        type: "list",
+        items: [
+          "Reduced runtime joins and relational query depth",
+          "Controlled SQL behavior for predictable execution",
+          "Implemented time-based caching (15-minute window)",
+          "Capped pagination to limit heavy result sets",
+          "Avoided AJAX rendering to ensure deterministic caching behavior",
+        ],
+      },
+      { type: "heading", level: 3, text: "Impact:" },
+      {
+        type: "list",
+        items: [
+          "Reduced database overhead during peak usage",
+          "Improved response time consistency for large semester datasets",
+          "Increased stability during high-concurrency registration events",
+        ],
+      },
+      { type: "heading", level: 3, text: "Modular, Scalable Implementation" },
+      {
+        type: "paragraph",
+        text: "Delivered as a standalone Drupal module with:",
+      },
+      {
+        type: "list",
+        items: [
+          "Custom service layer for snapshot management",
+          "Dedicated Views configuration",
+          "Isolated CSS library for UI control and maintainability",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This modular approach allowed independent deployment, easier testing, and future extensibility.",
+      },
+      { type: "heading", level: 3, text: "UX & Accessibility Improvements" },
+      {
+        type: "paragraph",
+        text: "Optimized both performance and user clarity:",
+      },
+      {
+        type: "list",
+        items: [
+          "Clear, structured enrollment indicators",
+          "Accessible loading states with reduced-motion support",
+          "Responsive filter layout",
+          "Improved empty-state guidance",
+          "Legacy-mode support to preserve institutional familiarity during transition",
+        ],
+      },
+      { type: "heading", level: 3, text: "Impact:" },
+      {
+        type: "list",
+        items: [
+          "Reduced user confusion during registration",
+          "Maintained accessibility standards",
+          "Improved clarity under high-stress usage scenarios",
+        ],
+      },
+      { type: "heading", level: 2, text: "Measurable Outcomes" },
+      {
+        type: "list",
+        items: [
+          "Improved performance predictability during peak load",
+          "Reduced query complexity and database strain",
+          "Cleaner separation of data processing and presentation layers",
+          "Architecture prepared for future enrollment and historical data expansion",
+        ],
+      },
+      { type: "heading", level: 2, text: "My Role" },
+      {
+        type: "list",
+        items: [
+          "UX strategy & interface design",
+          "Frontend engineering",
+          "Drupal Views architecture",
+          "Performance optimization",
+          "Accessibility implementation",
+          "Frontend/backend integration",
+        ],
+      },
+      { type: "heading", level: 2, text: "Skills Demonstrated" },
+      {
+        type: "list",
+        items: [
+          "Performance engineering within CMS platforms",
+          "Scalable data modeling",
+          "High-load system optimization",
+          "UX systems thinking",
+          "Accessibility-first frontend development",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This project demonstrates my ability to operate beyond theming — designing systems that scale, remain accessible, and perform reliably under institutional-level demand.",
+      },
+      { type: "heading", level: 2, text: "Design & Prototypes" },
+      {
+        type: "figma",
+        url: "https://embed.figma.com/deck/6W14tutflkpu8ZYKK1KhEb/Template-review-session-presentation---Modes?node-id=1-598&p=f&viewport=491%2C212%2C0.2&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share",
+        title: "Template review session presentation",
+      },
+      {
+        type: "figma",
+        url: "https://embed.figma.com/proto/F0D3Ea7Vl03XO0nl2qA4UX/Wireframes---Mockups?page-id=56%3A1249&node-id=56-1250&p=f&viewport=25%2C191%2C0.12&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=56%3A1250&embed-host=share",
+        title: "HoosList — wireframes & mockups prototype",
+      },
+      {
+        type: "paragraph",
+        text: "The web app launched with a decision to use Azure as the backend.",
+      },
+      {
+        type: "link",
+        url: "https://hooslist.virginia.edu",
+        text: "Visit HoosList (hooslist.virginia.edu)",
+      },
+    ],
+  },
 ];
 
 export function getCaseStudyBySlug(slug) {
