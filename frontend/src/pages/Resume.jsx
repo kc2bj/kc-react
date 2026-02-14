@@ -84,6 +84,13 @@ const Resume = () => {
                     <li>Provide technical leadership for Drupal CMS projects</li>
                   </ul>
                 </div>
+                <div>
+                  <span className="font-semibold text-neutral-800 dark:text-espresso-cream text-sm">Recognition:</span>
+                  <ul className="list-disc list-inside text-neutral-700 dark:text-espresso-cream/90 text-sm mt-1 space-y-0.5 ml-2">
+                    <li>Culture Ambassador for UVA ITS, representing the Custom Applications team</li>
+                    <li>Nominee for the UVA ITS Award for Continuous Innovation, 2025</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
