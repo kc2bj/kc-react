@@ -71,20 +71,6 @@ export const caseStudies = [
           "Research Development",
         ],
       },
-      { type: "heading", level: 3, text: "Domain Structure" },
-      {
-        type: "paragraph",
-        preformatted: true,
-        text: `Level One:   research.virginia.edu/
-Level Two:   ├── compliance.research.virginia.edu
-Level Three: │   ├── compliance.research.virginia.edu/Training
-             │   ├── compliance.research.virginia.edu/CUI
-Level Four:  │   └── compliance.research.virginia.edu/CUI/forms
-Level Two:   ├── animalcare.research.virginia.edu/
-Level Three: │   ├── animalcare.research.virginia.edu/acuc
-             │   ├── animalcare.research.virginia.edu/oaw
-Level Four:  │   └── animalcare.research.virginia.edu/oaw/training`,
-      },
       { type: "heading", level: 2, text: "Project Workflow" },
       {
         type: "paragraph",
