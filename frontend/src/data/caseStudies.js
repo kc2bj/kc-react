@@ -431,6 +431,23 @@ Level Four:  │   └── animalcare.research.virginia.edu/oaw/training`,
       },
     ],
   },
+  {
+    slug: "uva-fralin-museum",
+    title: "UVA Fralin Museum",
+    description: "UI redesign for the Fralin Museum of Art at the University of Virginia.",
+    blocks: [
+      { type: "heading", level: 2, text: "Project Overview" },
+      {
+        type: "paragraph",
+        text: "UI redesign work for the Fralin Museum of Art at UVA. Explore the interactive prototype below.",
+      },
+      {
+        type: "figma",
+        url: "https://embed.figma.com/proto/L1I5nGgYFSkswRA5EgVu63/Fralin-Redesign-Round-3?page-id=0%3A1&node-id=1-2&p=f&viewport=414%2C25%2C0.07&scaling=min-zoom&content-scaling=fixed&embed-host=share",
+        title: "Fralin Museum — redesign prototype (Round 3)",
+      },
+    ],
+  },
 ];
 
 export function getCaseStudyBySlug(slug) {
