@@ -15,7 +15,10 @@ const Resume = () => {
           Kris Celeste
         </h1>
         <p className="text-lg text-espresso-leaf dark:text-espresso-leaf font-semibold mt-1 mb-2">
-          UX Engineer · Technical Lead–Level Problem Solver · Drupal & Cloud Architecture · Founder, iAM Group, LLC
+          UX Engineer · Technical Lead–Level Problem Solver · Drupal & Cloud Architecture · Founder, <a href="https://theiamgroup.org" target="_blank" rel="noopener noreferrer" className="text-espresso-leaf dark:text-espresso-leaf underline hover:no-underline">iAM Studios</a>
+        </p>
+        <p className="text-sm text-neutral-600 dark:text-espresso-muted italic mt-1">
+          <a href="https://theiamgroup.org" target="_blank" rel="noopener noreferrer" className="text-espresso-leaf dark:text-espresso-leaf underline hover:no-underline">iAM Studios</a> is a small, founder-led studio. We build calm, privacy-first software for real-world complexity.
         </p>
         <p className="text-sm text-neutral-600 dark:text-espresso-muted">
           UI/UX Designer & Web Developer at UVA Information Technology Services · Charlottesville, Virginia

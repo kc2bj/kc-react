@@ -78,7 +78,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I'm a frontend developer and UX/UI designer. I turn ideas into clean, functional, and beautiful digital experiences.
+              I'm a frontend developer and UX/UI designer. I turn ideas into clean, functional, and beautiful digital experiences. I also founded <a href="https://theiamgroup.org" target="_blank" rel="noopener noreferrer" className="text-espresso-leaf dark:text-espresso-leaf underline hover:no-underline">iAM Studios</a> — a small, founder-led studio where we build calm, privacy-first software for real-world complexity.
             </motion.p>
             {/* Animated Divider */}
             <motion.hr

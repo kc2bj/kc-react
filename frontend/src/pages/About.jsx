@@ -24,8 +24,11 @@ export default function About() {
         I enjoy the nostalgia of revisiting classic movies and miss the excitement of seeing blockbuster films on opening nights. Whether it's drawing, cheering for my team, or spending time with my family, I try to bring passion and positivity to everything I do.
       </p>
 
-      <p className="mb-6">
+      <p className="mb-4">
         Outside of crafting digital experiences, I enjoy exploring bookstores, following the MCU, and spending time with my family — my wife, our four children, and our two dogs.
+      </p>
+      <p className="mb-6">
+        I'm also the founder of <strong><a href="https://theiamgroup.org" target="_blank" rel="noopener noreferrer" className="text-espresso-leaf dark:text-espresso-leaf underline hover:no-underline">iAM Studios</a></strong>, a small, founder-led studio. We build calm, privacy-first software for real-world complexity.
       </p>
     </motion.section>
   );

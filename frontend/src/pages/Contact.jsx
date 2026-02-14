@@ -30,7 +30,10 @@ export default function Contact() {
 
   return (
     <div className="min-w-[900px] max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Contact Me</h1>
+      <h1 className="text-3xl font-bold mb-2">Contact Me</h1>
+      <p className="text-neutral-600 dark:text-espresso-muted text-sm mb-6">
+        For freelance, collaboration, or <a href="https://theiamgroup.org" target="_blank" rel="noopener noreferrer" className="text-espresso-leaf dark:text-espresso-leaf underline hover:no-underline">iAM Studios</a> (calm, privacy-first software for real-world complexity) — reach out below.
+      </p>
       <form onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-espresso-bg p-6 rounded-lg shadow" autoComplete="off">
         {/* Honeypot field for bots */}
         <div style={{ display: 'none' }} aria-hidden="true">
