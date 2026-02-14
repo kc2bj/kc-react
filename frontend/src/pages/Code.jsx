@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 
 export default function Code() {
   const [contributions, setContributions] = useState([]);
+  const [recap, setRecap] = useState(null);
 
   useEffect(() => {
     fetch("/.netlify/functions/github-contributions")
       .then((res) => res.json())
       .then((data) => {
         setContributions(data.contributions || []);
+        setRecap(data.recap ?? null);
       })
       .catch((err) =>
         console.error("Error fetching GitHub data:", err)
@@ -75,12 +77,26 @@ export default function Code() {
           Code Contribution Recap
         </h3>
         <ul className="text-sm text-gray-700 dark:text-espresso-muted leading-relaxed list-disc ml-5 space-y-2">
-          <li>
-            <strong>784 contributions</strong> in the past year across 8 repositories
-          </li>
-          <li>
-            <strong>69% Commits, 31% Pull Requests</strong> – feature development & collaboration
-          </li>
+          {recap ? (
+            <>
+              <li>
+                <strong>{recap.totalContributions.toLocaleString()} contributions</strong> in the past year
+                {recap.repositoryCount > 0 && (
+                  <> across <strong>{recap.repositoryCount} repositories</strong></>
+                )}
+              </li>
+              <li>
+                <strong>{recap.commitPercent}% Commits</strong>
+                {recap.pullRequestPercent > 0 && <> · <strong>{recap.pullRequestPercent}% Pull Requests</strong></>}
+                {recap.issuePercent > 0 && <> · <strong>{recap.issuePercent}% Issues</strong></>}
+                {" "}– feature development & collaboration
+              </li>
+            </>
+          ) : (
+            <li>
+              <strong>Contributions</strong> in the past year — breakdown loads from GitHub when available
+            </li>
+          )}
           <li>
             Tech stack includes <strong>Drupal</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Vite</strong>, <strong>Acquia</strong>, <strong>Netlify</strong>
           </li>
